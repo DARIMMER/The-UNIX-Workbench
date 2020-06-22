@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+
 function check {
 	if [ $2 -eq $2 2>/dev/null -o $2 -eq 0 2>/dev/null ] # If Interger
 	then
@@ -20,7 +21,7 @@ function check {
 #Main
 
 i=0
-answer=$(ls -1 | wc -l) # Counts Files
+answer=$(find . -type f | wc -l) # Counts Files
 while [ $i -lt 1 ]; do # While Wrong make Guess Loop
 	echo "How many files are in the current directory?"
 	echo "Type in a guess and then press Enter:"
